@@ -7,7 +7,7 @@ Expose long press event on any element or component.
 Install it:
 
 ```bash
-pnpm add solid-long-press
+pnpm add solid-long-press // or npm or yarn
 ```
 
 Use it:
@@ -37,3 +37,7 @@ const App = () => {
   );
 };
 ```
+
+## License
+
+MIT License © 2022 [Robert Soriano](https://github.com/wobsoriano)
