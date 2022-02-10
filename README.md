@@ -1,17 +1,39 @@
-# {{ name_of_lib }}
+# solid-long-press
 
-{{ desc_of_lib }}
+Expose long press event on any element or component.
 
 ## Quick start
 
 Install it:
 
 ```bash
-pnpm add {{ me }}/{{ name_of_lib }}
+pnpm add solid-long-press
 ```
 
 Use it:
 
 ```tsx
-import {{ name_of_lib }} from '{{ name_of_lib }}'
+import longPress from 'solid-long-press';
+
+const App = () => {
+  const onLongPressStart = () => {
+    // triggers after 300ms of mousedown
+  };
+
+  const onLongPressStop = () => {
+    // triggers on mouseup of document
+  };
+
+  return (
+    <div>
+      <button
+        use:longPress={300}
+        oncapture:LongPressStart={onLongPressStart}
+        oncapture:LongPressStop={onLongPressStop}
+      >
+        Click and Hold for 300ms
+      </button>
+    </div>
+  );
+};
 ```
