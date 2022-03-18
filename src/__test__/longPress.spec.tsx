@@ -20,7 +20,7 @@ const App = () => {
         oncapture:LongPressStart={onLongPressStart}
         oncapture:LongPressStop={onLongPressStop}
       >
-        Click and Hold for 150ms
+        Click and Hold for 300ms
       </button>
     </>
   );
