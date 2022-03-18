@@ -10,8 +10,9 @@
     "emitDeclarationOnly": true,
     "strict": true,
     "jsx": "preserve",
+    "jsxImportSource": "solid-js",
     "resolveJsonModule": true
   },
   "include": ["src"],
-  "exclude": ["node_modules", "**/__tests__/*"]
+  "exclude": ["node_modules"]
 }
