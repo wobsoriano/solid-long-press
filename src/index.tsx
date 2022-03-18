@@ -22,7 +22,7 @@ declare module 'solid-js' {
 const longPressStop = new CustomEvent('LongPressStop');
 const longPressStart = new CustomEvent('LongPressStart');
 
-function longPress(el: LongPressHTMLElement, value: () => number) {
+export function longPress(el: LongPressHTMLElement, value: () => number) {
   el.dataset.longPressTimeoutId = '0';
   const duration = value();
   let eventStarted = false;
