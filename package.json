@@ -6,17 +6,15 @@
   "files": [
     "dist"
   ],
-  "main": "dist/esm/index.js",
-  "module": "dist/esm/index.js",
-  "types": "dist/types/index.d.ts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
-    ".": {
-      "solid": "./dist/source/index.jsx",
-      "default": "./dist/esm/index.js"
-    }
+    "require": "./dist/index.cjs",
+    "import": "./dist/index.js"
   },
   "scripts": {
-    "build": "rollup -c",
+    "build": "tsup",
     "test": "vitest run",
     "test:watch": "vitest watch",
     "release": "bumpp --commit --push --tag && pnpm publish",
@@ -39,10 +37,11 @@
   },
   "devDependencies": {
     "bumpp": "^7.1.1",
+    "esbuild": "^0.14.27",
+    "esbuild-plugin-solid": "^0.4.2",
     "jsdom": "^19.0.0",
-    "rollup": "^2.70.1",
-    "rollup-preset-solid": "^1.4.0",
     "solid-testing-library": "^0.3.0",
+    "tsup": "^5.12.1",
     "typescript": "^4.4.4",
     "vite-plugin-solid": "^2.2.6",
     "vitest": "^0.7.4"

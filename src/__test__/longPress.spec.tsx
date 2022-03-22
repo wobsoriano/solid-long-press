@@ -1,6 +1,6 @@
 import { render, fireEvent, screen, cleanup } from 'solid-testing-library';
 import { describe, afterEach, expect, test, vi } from 'vitest';
-import { longPress as longPressDirective } from '..';
+import { longPress as longPressDirective } from '../index';
 
 const longPress = longPressDirective;
 
