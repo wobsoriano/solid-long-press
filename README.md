@@ -7,7 +7,7 @@ Expose long press event on any element or component.
 Install it:
 
 ```bash
-pnpm add solid-long-press // or npm or yarn
+pnpm add solid-long-press # or npm or yarn
 ```
 
 Use it:
